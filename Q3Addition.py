@@ -1,2 +1,16 @@
-# Create a program that will ask the user an addition question. 
-# The program will generate two random numbers between 1 and 100, and display them as an addition question with appropriate prompts.
+from random import randint
+
+A = randint(0, 100)
+B = randint(0, 100)
+ANS = A + B
+print(f"What is {A} + {B}?")
+
+C = None
+while not isinstance(C, int):
+    try: C = int(input("Ans: "))
+    except: pass
+
+if ANS == C:
+    print("\nCorrect!")
+else:
+    print(f"\nIncorrect, Answer is: {ANS}")

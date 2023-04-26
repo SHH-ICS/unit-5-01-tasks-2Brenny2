@@ -1,2 +1,12 @@
-# Create a program that accepts 2 numbers from the user. 
-# Your program will output a random number between the range given by the user.
+import random
+A = None
+B = None
+
+while not isinstance(A, int):
+    try: A = int(input("Min: "))
+    except: pass
+while not isinstance(B, int):
+    try: B = int(input("Max: "))
+    except: pass
+
+print(f"\nRandom #: {random.randint(A, B)}")
